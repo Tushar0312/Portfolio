@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PORTFOLIO | Tushar Bansal</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="name">
+            <h1><a href="#home">Tushar Bansal</a></h1>
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#hobbies-container">My Hobbies</a></li>
+            <li class="item"><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section  -->
+    <section id="home">
+        <div id="home">
+            <div class="box">
+                <div class="h-secondary center">Hi, I am</div>
+                <h1 class="h-primary center">Tushar Bansal</h1>
+                <p class="center"> Pursuaing Bachelor of Technology (B. Tech.) in Computer Science with specialization in Artificial Intelligence (CSAI) Netaji Subhas University Of Technology, New Delhi , India.</p>
+                <button class="btn center"><a href="#hobbies-container">My Hobbies</a></button>
+                <button class="btn center"><a href="skills">Skills</a></button>
+            </div>
+            <div class="box">
+                <img src="Resume pic.png">
+            </div>
+        </div>
+    </section>        
+
+    <!-- Hobbies Section  -->
+    <section id="hobbies-container">
+        <h1 class="h-primary center">My Hobbies</h1>
+        <div id="hobbies">
+            <div class="box">
+                <img src="Cricket-Logo-PNG-Image-removebg-preview.png" alt="">
+                <h2 class="h-secondary center">Cricket</h2>
+            </div>
+            <div class="box">
+                <img src="soccer-football-logo-removebg-preview.png" alt="">
+                <h2 class="h-secondary center">Football</h2>
+            </div>
+            <div class="box">
+                <img src="video-games-logo-removebg-preview.png" alt="">
+                <h2 class="h-secondary center">Video Games</h2>
+            </div>
+            <div class="box">
+                <img src="coding-logo-removebg-preview.png" alt="">
+                <h2 class="h-secondary center">Coding</h2> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1 class="h-primary">Skills</h1>
+        <h3>C Language</h3>
+        <div class="progress-bar">
+            <div class="skill c-language" style></div>
+        </div>
+        <h3>C++ Language</h3>
+        <div class="progress-bar">
+            <div class="skill C-language" style></div>
+        </div>
+        <h3>Data Structures & Algorithms</h3>
+        <div class="progress-bar">
+            <div class="skill DSA"></div>
+        </div>
+        <h3>Front End Web Development</h3>
+        <div class="progress-bar">
+            <div class="skill frontend"></div>
+        </div>
+        <h3>Python Language</h3>
+        <div class="progress-bar">
+            <div class="skill pyhton"></div>
+        </div>
+        <h3>Back End Web Development</h3>
+        <div class="progress-bar">
+            <div class="skill backend"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <footer>
+        <div class="center">
+            Copyright &copy; &emsp; All rights reserved!
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+        var header = document.getElementById("navbar");
+        var btns = header.getElementsByClassName("item");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) { 
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+</html>
